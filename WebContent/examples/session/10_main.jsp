@@ -7,9 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<script>
+alert("들어옴?")
+</script>
+
 <%
 	if(session.getAttribute("loginUser") == null){
-		response.sendRedirect("index.jsp");
+		out.print(session.getAttribute("loginUser"));
+		/* response.sendRedirect("index.jsp"); */
 	}else{
 %>	
 	<%= session.getAttribute("loginUser") %> 님 로그인 되었습니다.

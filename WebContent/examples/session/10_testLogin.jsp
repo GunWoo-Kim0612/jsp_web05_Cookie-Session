@@ -15,12 +15,12 @@
 	String name = "김건우";
 	
 	if(id.equals(request.getParameter("floatingInput")) && pw.equals(request.getParameter("floatingPassword"))  ){
-		session.setAttribute("loginindUser", name);
+		session.setAttribute("loginUser", name);
 		response.sendRedirect("10_main.jsp");
+		
 	}else{
 %>
 	<script>
-	
 	alert("틀림" );
 	location.href="index.jsp";
 
